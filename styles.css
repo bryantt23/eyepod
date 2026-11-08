@@ -1,31 +1,150 @@
-iframe {
-  width: 100%;
-  height: 350px;
-  border: 0;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 32px;
+  font-family: system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #243438;
+  background: #fff;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  max-width: 800px;
+  margin: 0 0 64px;
+  font-size: 56px;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin: 0 0 24px;
+  font-size: 36px;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+.services,
+.about {
+  margin-bottom: 80px;
+}
+
+.service {
+  padding: 24px 0;
+  border-bottom: 1px solid #dce5e5;
+}
+
+.service p {
+  max-width: 75ch;
+  margin-bottom: 0;
 }
 
 .about,
 .contact {
   display: flex;
+  gap: 48px;
+  align-items: flex-start;
 }
 
-.phoropter {
+.phoropter,
+.about-description,
+.details,
+.send-message {
   flex: 1;
-}
-
-.about-description {
-  flex: 1;
+  min-width: 0;
 }
 
 .phoropter img {
+  display: block;
   width: 100%;
-  object-fit: contain;
+  height: auto;
+  border-radius: 16px;
 }
 
-.details {
-  flex: 1;
+.about-description {
+  padding-top: 16px;
 }
 
-.send-message {
-  flex: 1;
+iframe {
+  display: block;
+  width: 100%;
+  height: 350px;
+  margin-top: 28px;
+  border: 0;
+  border-radius: 16px;
+}
+
+.send-message > p {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.form-example {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  color: inherit;
+  background: #f8fafb;
+  border: 1px solid #aabbbc;
+  border-radius: 8px;
+}
+
+textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #087f8c;
+  outline-offset: 3px;
+}
+
+input[type='submit'] {
+  padding: 12px 28px;
+  color: white;
+  background: #086773;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background: #064f58;
 }
